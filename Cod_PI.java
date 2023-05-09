@@ -5,73 +5,108 @@ public class Cod_PI {
 		
 //		PARTE COLETIVA      PARTE COLETIVA         PARTE COLETIVA            PARTE COLETIVA         PARTE COLETIVA          PARTE COLETIVA            PARTE COLETIVA           PARTE COLETIVA
 		Scanner rec = new Scanner (System.in);
-		String resp,resp2,respos3,respAv;
+		String resp,resp31;
 		double gs=0, carbon=0;
+		int tpGas, resp2,resp3,resp4,resp5;
+		int cont=0,cont1=0, cont2=0, cont3=0,cont4=0;
 		
 		
-		System.out.println("Olá, bem vindo ao Clean Carbon. Vamos comeÃ§ar...\n"
-				+ "Digite quantas pessoas moram com vocêª:");
+		System.out.println("Olá, bem vindo ao Clean Carbon. Vamos começar...\n"
+				+ "Digite quantas pessoas moram com você?:");
 		int fml=rec.nextInt();
 		
-		System.out.println("Qual o KWh da sua Ãºltima conta? ");
+		System.out.println("Qual o KWh da sua última conta? ");
 		int kwfml=rec.nextInt();
 		
-		System.out.println("O gás na sua casa é canalizdo ou é botijão? \n"
+		do {
+			if (cont>0) {
+				System.out.println("Opção Inválida");
+			}
+			System.out.println("O gás na sua casa é canalizdo ou é botijão? \n"
 				+ "1 - Gás canalizado \n"
 				+ "2 - Gás botijão ");
-		int tpGas=rec.nextInt();
+			tpGas=rec.nextInt();   //RESPOSTA 1
+			cont++;
+		
+		}while((tpGas!=1) && (tpGas!=2));
 		
 		if(tpGas==1) {
 			System.out.printf("Qual o consumo da última conta em metros cubicos? \n");
 			gs=rec.nextInt();
 			gs= gs*105;
-		}else if(tpGas==2){
+		}else{
 			System.out.printf("Quantos botijões você compra por mês? \n");
 			gs=rec.nextInt();
 			gs= (gs*5.2)*105;
-		}else {
-			System.out.println("Opção inválida");
 		}
 		
 		
-		System.out.println("Sua família recicla alumínio? ");
-		resp2 = rec.next();
-		resp2.toUpperCase();
-		if(resp2.equalsIgnoreCase("NÃO")) {
+		do {
+			if(cont1>0) {
+				System.out.println("Opção inválida");
+			}
+			System.out.println("Sua família recicla alumínio? \n"
+					+ "1. SIM \n"
+					+ "2. NÃO");
+			resp2 = rec.nextInt();    //RESPOSTA 2
+			cont1++;
+			
+			System.out.println(resp2);
+		}while( resp2!=1 && resp2!=2 ) ; 
+		
+		
+		if(resp2==2 ) {
 			carbon=+166;
 		}
 		System.out.println("Dados recebidos");
 		
 		
-		System.out.println("Sua família viajou de avião no último ano? ");
-		respos3 = rec.next();
-		respos3.toUpperCase();
-		
-		if(respos3.equalsIgnoreCase("SIM")) {
-			System.out.println("Foi uma viagem de duração maior que 4 horas?");
-			rec.nextLine();
-			respAv = rec.nextLine();
-			respAv.toUpperCase();
-			
-			if(respAv.equalsIgnoreCase("SIM")) {
-				carbon=+4400;
-			}else if(respAv.equalsIgnoreCase("NÃO")){
-				carbon=+1100;
-			}else {
+		do {
+			if (cont2>0) {
 				System.out.println("Opção inválida");
 			}
+			System.out.println("Sua família viajou de avião no último ano? \n"
+					 					+ "1. SIM \n"
+										+ "2. NÃO");
+			resp3 = rec.nextInt();      //RESPOSTA 3
+			cont2++;
+		}while(resp3!=1 && resp3!=2);
+		
+		if(resp3==1) {
+			do {
+				if(cont3>0) {
+					System.out.println("Opção inválida");
+				}
+				System.out.println("Foi uma viagem de duração maior que 4 horas? \n"
+						+ "1. SIM \n"
+						+ "2. NÃO");
+				resp4=rec.nextInt();  //RESPOSTA 4
+				cont3++;
+				
+			}while(resp4!=1 && resp4!=2);
 			
-		}else if(respos3.equalsIgnoreCase("NÃO")){
+			if(resp4==1) {
+				carbon=+4400;
+			}else{
+				carbon=+1100;
+			}
 			System.out.println("Dado recebido");
 		}else{
-			System.out.println("Opção inválida");
+			System.out.println("Dado recebido");
 		}
 		
-		System.out.println("Sua família recicla papel?");
-		resp = rec.nextLine();
-		resp.toUpperCase();
+		do {
+			if(cont4>0) {
+				System.out.println("Opção inválida");
+			}
+			System.out.println("Sua família recicla papel? \n"
+					+ "1. SIM \n"
+					+ "2. NÃO");
+			resp5=rec.nextInt();     //RESPOSTA 5
+			cont4++;
+		}while(resp5!=1 && resp5!=2);
 				
-		if(resp.equalsIgnoreCase("NÃO")) {
+		if(resp5==2) {
 			carbon=+184;
 		}
 		System.out.println("Dados recebidos");
@@ -79,15 +114,14 @@ public class Cod_PI {
 	
 		
 //      PARTE INDIVIDUAL     PARTE INDIVIDUAL        PARTE INDIVIDUAL          PARTE INDIVIDUAL         PARTE INDIVIDUAL            PARTE INDIVIDUAL          PARTE INDIVIDUAL         PARTE INDIVIDUAL  
-		String resp4;
+
 		double consuOnibus,consuMetro,qntkilometros,qntkilometros2,ltM,consGasol,consEt;
 		
 
 		System.out.println("Você possui veículo(s)?");
-		resp4=rec.nextLine();
-		resp4.toUpperCase();
-		
-		if(resp4.equalsIgnoreCase("SIM")) {
+		resp31=rec.nextLine();
+				
+		if(resp31.equalsIgnoreCase("SIM")) {
 
 			System.out.println("O veículo é carro ou moto? \n"
 					+ "1.carro \n"
@@ -134,7 +168,7 @@ public class Cod_PI {
 		    }else {
 				System.out.println("Opção inválida");
 			}
-		}else if(resp4.equalsIgnoreCase("NÃƒO")) {
+		}else if(resp31.equalsIgnoreCase("NÃƒO")) {
 			System.out.println("Você usa outro meio de locomoção?");
 			String respLocom=rec.nextLine();
 			respLocom.toUpperCase();
