@@ -5,14 +5,13 @@ public class Cod_PI {
 		
 //		PARTE COLETIVA      PARTE COLETIVA         PARTE COLETIVA            PARTE COLETIVA         PARTE COLETIVA          PARTE COLETIVA            PARTE COLETIVA           PARTE COLETIVA
 		Scanner rec = new Scanner (System.in);
-		String resp,resp31;
 		double gs=0, carbon=0;
 		int tpGas, resp2,resp3,resp4,resp5;
 		int cont=0,cont1=0, cont2=0, cont3=0,cont4=0;
 		
 		
 		System.out.println("Olá, bem vindo ao Clean Carbon. Vamos começar...\n"
-				+ "Digite quantas pessoas moram com você?:");
+				+ "Digite quantas pessoas moram com você:");
 		int fml=rec.nextInt();
 		
 		System.out.println("Qual o KWh da sua última conta? ");
@@ -52,7 +51,7 @@ public class Cod_PI {
 			cont1++;
 			
 			System.out.println(resp2);
-		}while( resp2!=1 && resp2!=2 ) ; 
+		}while( (resp2!=1) && (resp2!=2) ) ; 
 		
 		
 		if(resp2==2 ) {
@@ -66,11 +65,11 @@ public class Cod_PI {
 				System.out.println("Opção inválida");
 			}
 			System.out.println("Sua família viajou de avião no último ano? \n"
-					 					+ "1. SIM \n"
-										+ "2. NÃO");
+					+ "1. SIM \n"
+					+ "2. NÃO");
 			resp3 = rec.nextInt();      //RESPOSTA 3
 			cont2++;
-		}while(resp3!=1 && resp3!=2);
+		}while((resp3!=1) && (resp3!=2));
 		
 		if(resp3==1) {
 			do {
@@ -83,7 +82,7 @@ public class Cod_PI {
 				resp4=rec.nextInt();  //RESPOSTA 4
 				cont3++;
 				
-			}while(resp4!=1 && resp4!=2);
+			}while((resp4!=1) && (resp4!=2));
 			
 			if(resp4==1) {
 				carbon=+4400;
@@ -104,7 +103,7 @@ public class Cod_PI {
 					+ "2. NÃO");
 			resp5=rec.nextInt();     //RESPOSTA 5
 			cont4++;
-		}while(resp5!=1 && resp5!=2);
+		}while((resp5!=1) && (resp5!=2));
 				
 		if(resp5==2) {
 			carbon=+184;
@@ -116,83 +115,118 @@ public class Cod_PI {
 //      PARTE INDIVIDUAL     PARTE INDIVIDUAL        PARTE INDIVIDUAL          PARTE INDIVIDUAL         PARTE INDIVIDUAL            PARTE INDIVIDUAL          PARTE INDIVIDUAL         PARTE INDIVIDUAL  
 
 		double consuOnibus,consuMetro,qntkilometros,qntkilometros2,ltM,consGasol,consEt;
-		
+		int tpCombut,tpVeicl,resp6,resp7,resp8;
+		int cont5=0,cont6=0, cont7=0,cont8=0,cont9=0,cont10=0;
 
-		System.out.println("Você possui veículo(s)?");
-		resp31=rec.nextLine();
+		do {
+			if(cont5>0) {
+				System.out.println("Opção inválida");
+			}
+			System.out.println("Você possui veículo(s)? \n"
+					+ "1. SIM \n"
+					+ "2. NÃO ");
+			resp6=rec.nextInt();
+			cont5++;
+		}while((resp6!=1) && (resp6!=2));
 				
-		if(resp31.equalsIgnoreCase("SIM")) {
+		if(resp6==1) {
 
-			System.out.println("O veículo é carro ou moto? \n"
-					+ "1.carro \n"
-					+ "2.moto ");
-			int tpVeicl = rec.nextInt();
+			do {
+				if(cont6>0) {
+					System.out.println("Opção inválida");
+				}
+				System.out.println("O veículo é carro ou moto? \n"
+						+ "1.carro \n"
+						+ "2.moto ");
+				tpVeicl = rec.nextInt();
+				cont6++;
+			}while((tpVeicl!=1) && (tpVeicl!=2));
 			
 			if(tpVeicl==1) {
-				System.out.println("Qual tipo de combustível é usado? \n"
-						+ "1.Etanol \n"
-						+ "2.Gasolina");
-				int tpCombut = rec.nextInt();
+				do {
+					if(cont7>0) {
+						System.out.println("Opção inválida");
+					}
+					System.out.println("Qual tipo de combustível é usado? \n"
+							+ "1.Etanol \n"
+							+ "2.Gasolina");
+					tpCombut = rec.nextInt();
+					cont7++;
+				}while((tpCombut!=1) && (tpCombut!=2));
 				
 				if(tpCombut==1) {
 					System.out.println("Quantos litros você abastece por mês?(visto que o consumo médio no Brasil é de 12km por litro)");
 					ltM=rec.nextInt();
 					carbon =+ ltM * 0.82 * 0.75 * 3.7; //= total de kg CO2 emitido por litro.
-				}else if(tpCombut==2) {
+				}else{
 					System.out.println("Quantos litros você abastece por mês?(visto que o consumo médio no Brasil é de 12km por litro)");
 					ltM=rec.nextInt();
 					carbon =+  (ltM * 789)/19.5 * 1.59;
-				}else {
-					System.out.println("Opção inválida");
 				}
 				
-		    }else if(tpVeicl==2) {
-				System.out.println("Qual tipo de combustível é usado? \n"
-						+ "1.Etanol \n"
-						+ "2.Gasolina");
-				int tpComb = rec.nextInt();
+		    }else{
+				do {
+					if(cont8>0) {
+						System.out.println("Opção inválida");
+					}
+					System.out.println("Qual tipo de combustível é usado? \n"
+							+ "1.Etanol \n"
+							+ "2.Gasolina");
+					tpCombut = rec.nextInt();
+					cont8++;
+				}while((tpCombut!=1) && (tpCombut!=2));
 				
-				if(tpComb==1) {
+				if(tpCombut==1) {
 					System.out.println("Quantos litros você abastece por mês?(visto que o consumo médio no Brasil é de 12km por litro)");
 					ltM=rec.nextDouble();
 					carbon =+ ltM * 0.82 * 0.75 * 3.7;
-				}else if(tpComb==2) {
+				}else{
 					System.out.println("Quantos litros você abastece por mês?(visto que o consumo médio no Brasil é de 12km por litro)");
 					ltM=rec.nextDouble();
 					carbon =+  (ltM * 789)/19.5 * 1.59;
-				}else {
-					System.out.println("Opção inválida");
 				}
 			
 		    
-		    }else {
-				System.out.println("Opção inválida");
-			}
-		}else if(resp31.equalsIgnoreCase("NÃƒO")) {
-			System.out.println("Você usa outro meio de locomoção?");
-			String respLocom=rec.nextLine();
-			respLocom.toUpperCase();
-			
-			if (respLocom.equalsIgnoreCase("SIM")) {
-				System.out.println("Qual meio de locomoção você usa? \n"
-						+ "1.metro/trem \n"
-						+ "2.onibus \n"
-						+ "3.metro/trem e onibus");
-				int meLoco=rec.nextInt();
+		    }
+		}else{
+			do {
+				if(cont9>0) {
+					System.out.println("Opção inválida");
+				}
+				System.out.println("Você usa outro meio de locomoção? \n"
+						+ "1.SIM \n"
+						+ "2.NÃO");
+				resp7=rec.nextInt();
+				cont9++;
 				
-				if(meLoco==1) {
+			}while((resp7!=1) && (resp7!=2));
+			
+			if (resp7==1) {
+				do {
+					if(cont10>0) {
+						System.out.println("Opção inválida");
+					}
+					System.out.println("Qual meio de locomoção você usa? \n"
+							+ "1.metro/trem \n"
+							+ "2.onibus \n"
+							+ "3.metro/trem e onibus");
+					resp8=rec.nextInt();
+					cont10++;
+				}while((resp8!=1) && (resp8!=2) && (resp8!=3));
+				
+				if(resp8==1) {
 					System.out.println("Quantos kilometros você percorre por mês?");
 					qntkilometros=rec.nextDouble();
 					consuMetro=3.16*qntkilometros;
 					carbon=+consuMetro;
 					
-				}else if (meLoco==2) {
+				}else if (resp8==2) {
 					System.out.println("Quantos kilometros você percorre por mês?");
 					qntkilometros=rec.nextDouble();
 					consuOnibus=1.28*qntkilometros;
 					carbon=+consuOnibus;
 					
-				}else if(meLoco==3) {
+				}else{
 					System.out.println("Quantos kilometros você percorre por mês no metro/trem?");
 					qntkilometros=rec.nextInt();
 					consuMetro=3.16*qntkilometros;
@@ -204,27 +238,17 @@ public class Cod_PI {
 					double consOni_Metro= consuMetro+consuOnibus;
 					carbon=+consOni_Metro;
 					
-				}else{
-					System.out.println("Opção inválida");
-				}	
+				}
 				
-				
-			}else if(respLocom.equalsIgnoreCase("NÃO")){
+			  }else{
 				System.out.println("Dados recebidos");
-			}else {
-				System.out.println("Opção inválida");
 			}
-			
-			
+						
 		}
 
-		
-		
 		System.out.printf("Sua produção de carbono é :%.2f ",carbon);
 		
-		
-		
-
+		rec.close();
 	}
 	
 }
