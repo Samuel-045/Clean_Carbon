@@ -4,15 +4,19 @@ public class Cod_PI {
 	static Scanner rec = new Scanner (System.in);
     	public static void main(String args[]) {
         
-        System.out.println("Olá, bem vindo ao Clean Carbon. Vamos começar...\n"
-            	+ "Digite quantas pessoas moram com você:");
-    	int fml=rec.nextInt(); // Coloquei essa pergunta fora das funções pois não é possível retornar mais de um dado
-    	                       //e é desnecessário mais uma função só para essa pergunta
-    	
+        int fml=prgtFml();
     	double carbonCol=partColt();
     	partIndv(fml, carbonCol);
     	
 }
+    	public static int prgtFml() {
+    		System.out.println("Olá, bem vindo ao Clean Carbon. Vamos começar...\n"
+                	+ "Digite quantas pessoas moram com você:");
+        	int fml=rec.nextInt();
+        	
+        	return fml;
+    	}
+    	
     	public static double partColt() {
         	double gs=0, carbonCol=0;
         	int tpBand, tpGas, resp2,resp3,resp4,resp5;
