@@ -324,8 +324,22 @@ public class Cod_PI {
         	carbonInd=carbonInd*fml;
             
         	System.out.printf("Sua produção de carbono coletiva é: %.2f \n"
-                	+ "Sua produção individual é: %.2f", carbonCol,carbonInd);
+                	+ "Sua produção individual é: %.2f \n \n", carbonCol,carbonInd);
         	
+        	double carbonTL= carbonCol+carbonInd;
+        	
+        	        	
+        	if(carbonTL>7000) {
+        		System.out.printf("A junção de produção individual e coletiva é : %.2f \n"
+        				+ "Você está produzindo muito carbono, procure diminuir rapidamente a produção de carbono. ",carbonTL);
+        	}else if((carbonTL>3000) && (carbonTL<=6999)) {
+        		System.out.printf("A junção de produção individual e coletiva é : %.2f \n"
+        				+ "Você está produzindo carbono de forma moderada, tome cuidado com a produção de carbono.",carbonTL);
+        	}else {
+        		System.out.printf("A junção de produção individual e coletiva é : %.2f \n"
+        				+ "Você está produzindo pouquissíma qunatidade de carbono. \n"
+        				+ "Parabéns, o planeta te agradece.",carbonTL);
+        	}
 
     	}
 
