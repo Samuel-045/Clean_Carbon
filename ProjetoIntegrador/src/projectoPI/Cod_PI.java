@@ -111,7 +111,9 @@ public class Cod_PI {
 				if (cont3 > 0) {
 					System.out.println("Opção Inválida");
 				}
-				System.out.println("Foi uma viagem de duração maior que 4 horas? \n" + "1. SIM \n" + "2. NÃO");
+				System.out.println("Foi uma viagem de duração maior que 4 horas? \n"
+						+ "1. SIM \n"
+						+ "2. NÃO");
 				resp4 = rec.nextInt(); // RESPOSTA 4
 				cont3++;
 
@@ -131,7 +133,7 @@ public class Cod_PI {
 	}
 
 	public static void partIndv(int fml, double carbonCol) {
-		double carbonInd = 0, consuOnibus, consuMetro, qntkilometros, qntkilometros2, ltM;
+		double carbonInd = 0, consuOnibus=0, consuMetro=0, qntkilometros, qntkilometros2, ltM;
 		int tpCombut, tpVeicl, resp6, resp7, resp8;
 		int cont5 = 0, cont6 = 0, cont7 = 0, cont8 = 0, cont9 = 0, cont10 = 0, cont11 = 0, cont12 = 0;
 
@@ -307,19 +309,23 @@ public class Cod_PI {
 
 		if (carbonTL > 7000) {
 			System.out.printf("A junção de produção individual e coletiva é : %.2f \n"
-					+ "você está produzindo muito carbono, procure diminuir rapidamente a produção de carbono. ",
+					+ "você está produzindo muito carbono, procure diminuir rapidamente a produção de carbono. \n",
 					carbonTL);
 		} else if ((carbonTL > 3000) && (carbonTL <= 6999)) {
 			System.out.printf(
 					"A junção de produção individual e coletiva é : %.2f \n"
-							+ "você está produzindo carbono de forma moderada, tome cuidado com a produção de carbono.",
+							+ "você está produzindo carbono de forma moderada, tome cuidado com a produção de carbono. \n",
 					carbonTL);
 		} else {
 			System.out.printf("A junção de produção individual e coletiva é : %.2f \n"
-					+ "você está produzindo pouquissíma qunatidade de carbono. \n" + "Parabéns, o planeta te agradece.",
+					+ "você está produzindo pouquissíma qunatidade de carbono. \n" + "Parabéns, o planeta te agradece. \n",
 					carbonTL);
 		}
 
+		double[] valores = {consuOnibus, consuMetro, 5, 2}; // Valores para cada barra
+	    String[] cores = {"\u001B[31m", "\u001B[32m", "\u001B[34m", "\u001B[35m"}; // Cores para cada valor
+
+		GraficoBarrasEmpilhadas.GerarGrafico(valores,cores);
 	}
 
 }
