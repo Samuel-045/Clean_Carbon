@@ -34,3 +34,6 @@ Basta baixar o arquivo em sua máquina, ter o java (da versão 14 em diante para
 
 | [<img src="https://avatars.githubusercontent.com/u/95144250?s=400&u=149cf20f52f4c096721d16967b22655f18e5c7f5&v=4" width=115><br><sub>Samuel Victor</sub>](https://github.com/Samuel-045) |  [<img src="https://avatars.githubusercontent.com/u/131820949?v=4" width=115><br><sub>Robert Lacerda</sub>](https://github.com/Bob3411) |  [<img src="https://avatars.githubusercontent.com/u/124639354?v=4" width=115><br><sub>Leonardo Kaique</sub>](https://github.com/Psicokai) | [<img src="https://avatars.githubusercontent.com/u/132467782?v=4" width=115><br><sub>Felipe</sub>](https://github.com/AbdulHajid) |
 | :---: | :---: | :---: | :---: |
+
+
+
