@@ -14,11 +14,11 @@ public class PartInd {
 
 		do {
 			if (cont5 > 0) {
-				System.out.println("Opção Inválida");
+				System.out.println("OpÃ§Ã£o InvÃ¡lida");
 			}
-			System.out.println("Você possui veículo(s)? \n"
+			System.out.println("VocÃª possui veÃ­culo(s)? \n"
 					+ "1. SIM \n" 
-					+ "2. NÃO ");
+					+ "2. NÃƒO ");
 			resp6 = rec.nextInt();
 			cont5++;
 		} while ((resp6 != 1) && (resp6 != 2));
@@ -27,9 +27,9 @@ public class PartInd {
 
 			do {
 				if (cont6 > 0) {
-					System.out.println("Opção Inválida");
+					System.out.println("OpÃ§Ã£o InvÃ¡lida");
 				}
-				System.out.println("O veículo é carro ou moto? \n"
+				System.out.println("O veÃ­culo Ã© carro ou moto? \n"
 						+ "1.carro \n" 
 						+ "2.moto \n" 
 						+ "3.carro e moto ");
@@ -40,9 +40,9 @@ public class PartInd {
 			if (tpVeicl == 1) {
 				do {
 					if (cont7 > 0) {
-						System.out.println("Opção Inválida");
+						System.out.println("OpÃ§Ã£o InvÃ¡lida");
 					}
-					System.out.println("Qual tipo de combustível é usado? \n"
+					System.out.println("Qual tipo de combustÃ­vel Ã© usado? \n"
 							+ " 1.Etanol \n "
 							+ "2.Gasolina");
 					tpCombut = rec.nextInt();
@@ -51,13 +51,13 @@ public class PartInd {
 
 				if (tpCombut == 1) {
 					System.out.println(
-							"Quantos litros você abastece por mês? (visto que o consumo médio no Brasil é de 12km por litro)");
+							"Quantos litros vocÃª abastece por mÃªs? (visto que o consumo mÃ©dio no Brasil Ã© de 12km por litro)");
 					ltM = rec.nextInt();
 					carbonInd += ltM * 0.82 * 0.75 * 3.7; // = total de kg CO2 emitido por litro.
 					conComb +=ltM * 0.82 * 0.75 * 3.7;
 				} else {
 					System.out.println(
-							"Quantos litros você abastece por mês? (visto que o consumo médio no Brasil é de 12km por litro)");
+							"Quantos litros vocÃª abastece por mÃªs? (visto que o consumo mÃ©dio no Brasil Ã© de 12km por litro)");
 					ltM = rec.nextInt();
 					carbonInd +=(ltM * 789) / 19.5 * 1.59;
 					conComb +=(ltM * 789) / 19.5 * 1.59;
@@ -66,22 +66,22 @@ public class PartInd {
 			} else if (tpVeicl == 2) {
 				do {
 					if (cont8 > 0) {
-						System.out.println("Opção Inválida");
+						System.out.println("OpÃ§Ã£o InvÃ¡lida");
 					}
-					System.out.println("Qual tipo de combustível é usado? \n" + "1.Etanol \n" + "2.Gasolina");
+					System.out.println("Qual tipo de combustÃ­vel Ã© usado? \n" + "1.Etanol \n" + "2.Gasolina");
 					tpCombut = rec.nextInt();
 					cont8++;
 				} while ((tpCombut != 1) && (tpCombut != 2));
 
 				if (tpCombut == 1) {
 					System.out.println(
-							"Quantos litros você abastece por mês? (visto que o consumo médio no Brasil é de 12km por litro)");
+							"Quantos litros vocÃª abastece por mÃªs? (visto que o consumo mÃ©dio no Brasil Ã© de 12km por litro)");
 					ltM = rec.nextDouble();
 					carbonInd +=ltM * 0.82 * 0.75 * 3.7;
 					conComb +=ltM * 0.82 * 0.75 * 3.7;
 				} else {
 					System.out.println(
-							"Quantos litros você abastece por mês? (visto que o consumo médio no Brasil é de 12km por litro)");
+							"Quantos litros vocÃª abastece por mÃªs? (visto que o consumo mÃ©dio no Brasil Ã© de 12km por litro)");
 					ltM = rec.nextDouble();
 					carbonInd +=(ltM * 789) / 19.5 * 1.59;
 					conComb +=(ltM * 789) / 19.5 * 1.59;
@@ -90,9 +90,9 @@ public class PartInd {
 			} else {
 				do {
 					if (cont9 > 0) {
-						System.out.println("Opção Inválida");
+						System.out.println("OpÃ§Ã£o InvÃ¡lida");
 					}
-					System.out.println("Qual tipo de combustível é usado no carro? \n"
+					System.out.println("Qual tipo de combustÃ­vel Ã© usado no carro? \n"
 							+ "1.Etanol \n" 
 							+ "2.Gasolina");
 					tpCombut = rec.nextInt();
@@ -101,13 +101,13 @@ public class PartInd {
 
 				if (tpCombut == 1) {
 					System.out.println(
-							"Quantos litros você abastece por mês no carro? (visto que o consumo médio no Brasil é de 12km por litro)");
+							"Quantos litros vocÃª abastece por mÃªs no carro? (visto que o consumo mÃ©dio no Brasil Ã© de 12km por litro)");
 					ltM = rec.nextInt();
 					carbonInd +=ltM * 0.82 * 0.75 * 3.7;//  total de kg CO2 emitido por litro.
 					conComb +=ltM * 0.82 * 0.75 * 3.7;
 				} else {
 					System.out.println(
-							"Quantos litros você abastece por mês no carro? (visto que o consumo médio no Brasil é de 12km por litro)");
+							"Quantos litros vocÃª abastece por mÃªs no carro? (visto que o consumo mÃ©dio no Brasil Ã© de 12km por litro)");
 					ltM = rec.nextInt();
 					carbonInd +=(ltM * 789) / 19.5 * 1.59;
 					conComb +=(ltM * 789) / 19.5 * 1.59;
@@ -115,22 +115,22 @@ public class PartInd {
 
 				do {
 					if (cont10 > 0) {
-						System.out.println("Opção Inválida");
+						System.out.println("OpÃ§Ã£o InvÃ¡lida");
 					}
-					System.out.println("Qual tipo de combustível é usado na moto? \n" + "1.Etanol \n" + "2.Gasolina");
+					System.out.println("Qual tipo de combustÃ­vel Ã© usado na moto? \n" + "1.Etanol \n" + "2.Gasolina");
 					tpCombut = rec.nextInt();
 					cont10++;
 				} while ((tpCombut != 1) && (tpCombut != 2));
 
 				if (tpCombut == 1) {
 					System.out.println(
-							"Quantos litros você abastece por mês na moto? (visto que o consumo médio no Brasil é de 12km por litro)");
+							"Quantos litros vocÃª abastece por mÃªs na moto? (visto que o consumo mÃ©dio no Brasil Ã© de 12km por litro)");
 					ltM = rec.nextInt();
 					carbonInd +=ltM * 0.82 * 0.75 * 3.7; // = total de kg CO2 emitido por litro.
 					conComb +=ltM * 0.82 * 0.75 * 3.7;
 				} else {
 					System.out.println(
-							"Quantos litros você abastece por mês na moto? (visto que o consumo médio no Brasil é de 12km por litro)");
+							"Quantos litros vocÃª abastece por mÃªs na moto? (visto que o consumo mÃ©dio no Brasil Ã© de 12km por litro)");
 					ltM = rec.nextInt();
 					carbonInd +=(ltM * 789) / 19.5 * 1.59;
 					conComb +=(ltM * 789) / 19.5 * 1.59;
@@ -141,11 +141,11 @@ public class PartInd {
 		} else {
 			do {
 				if (cont11 > 0) {
-					System.out.println("Opção Inválida");
+					System.out.println("OpÃ§Ã£o InvÃ¡lida");
 				}
-				System.out.println("você usa outro meio de locomoção? \n"
+				System.out.println("vocÃª usa outro meio de locomoÃ§Ã£o? \n"
 						+ "1.SIM \n" 
-						+ "2.NÃO");
+						+ "2.NÃƒO");
 				resp7 = rec.nextInt();
 				cont11++;/////////////
 
@@ -154,32 +154,32 @@ public class PartInd {
 			if (resp7 == 1) {
 				do {
 					if (cont12 > 0) {
-						System.out.println("Opção Inválida");
+						System.out.println("OpÃ§Ã£o InvÃ¡lida");
 					}
-					System.out.println("Qual meio de locomoção você usa? \n" + "1.metro/trem \n" + "2.onibus \n"
+					System.out.println("Qual meio de locomoÃ§Ã£o vocÃª usa? \n" + "1.metro/trem \n" + "2.onibus \n"
 							+ "3.metro/trem e onibus");
 					resp8 = rec.nextInt();
 					cont12++;
 				} while ((resp8 != 1) && (resp8 != 2) && (resp8 != 3));
 
 				if (resp8 == 1) {
-					System.out.println("Quantos kilometros você percorre por mês?");
+					System.out.println("Quantos kilometros vocÃª percorre por mÃªs?");
 					qntkilometros = rec.nextDouble();
 					consuMetro = 3.16 * qntkilometros;
 					carbonInd +=consuMetro;
 
 				} else if (resp8 == 2) {
-					System.out.println("Quantos kilometros você percorre por mês?");
+					System.out.println("Quantos kilometros vocÃª percorre por mÃªs?");
 					qntkilometros = rec.nextDouble();
 					consuOnibus = 1.28 * qntkilometros;
 					carbonInd +=consuOnibus;
 
 				} else {
-					System.out.println("Quantos kilometros você percorre por mês no metro/trem?");
+					System.out.println("Quantos kilometros vocÃª percorre por mÃªs no metro/trem?");
 					qntkilometros = rec.nextInt();
 					consuMetro = 3.16 * qntkilometros;
 
-					System.out.println("Quantos kilometros você percorre por mês no onibus?");
+					System.out.println("Quantos kilometros vocÃª percorre por mÃªs no onibus?");
 					qntkilometros2 = rec.nextInt();
 					consuOnibus = 3.16 * qntkilometros2;
 
@@ -196,27 +196,29 @@ public class PartInd {
 
 		carbonInd = carbonInd * fml;
 
-		System.out.printf("\nSua produção de carbono coletiva é: %.2f tCO2 \n" 
-		                  + "Sua produção individual é: %.2f tCO2 \n",
+		System.out.printf("\nSua produÃ§Ã£o de carbono coletiva Ã©: %.2f tCO2 \n" 
+		                  + "Sua produÃ§Ã£o individual Ã©: %.2f tCO2 \n",
 				carbonCol, carbonInd);
 
 		double carbonTL = carbonCol + carbonInd;
 
+		//Cada if abaixo vai colocar uma cor na emnsagem de acordo com a produÃ§Ã£o de carbono
 		if (carbonTL > 7000) {
-			System.out.printf("A junção de produção individual e coletiva é : %.2f tCO2 \n"
-					+ "você está produzindo muito carbono, procure diminuir rapidamente a produção de carbono. \n",
+			System.out.printf("A junÃ§Ã£o de produÃ§Ã£o individual e coletiva Ã© : %.2f tCO2 \n"
+					+ "\u001B[31mVocÃª estÃ¡ produzindo MUITO CARBONO, procure diminuir rapidamente a produÃ§Ã£o de carbono.\u001B[0m \n\n",
 					carbonTL);
 		} else if ((carbonTL > 2000) && (carbonTL <= 6999)) {
 			System.out.printf(
-					"A junção de produção individual e coletiva é : %.2f tCO2 \n"
-							+ "você está produzindo carbono de forma moderada, tome cuidado com a produção de carbono. \n",
+					"A junÃ§Ã£o de produÃ§Ã£o individual e coletiva Ã© : %.2f tCO2 \n"
+				      + "\u001B[33mVocÃª estÃ¡ produzindo carbono de forma moderada, tome cuidado com a produÃ§Ã£o de carbono.\u001B[0m  \n\n",
 					carbonTL);
 		} else {
-			System.out.printf("A junção de produção individual e coletiva é : %.2f tCO2 \n"
-					+ "você está produzindo pouquissíma qunatidade de carbono. Parabéns, o planeta te agradece. \n",
+			System.out.printf("A junÃ§Ã£o de produÃ§Ã£o individual e coletiva Ã© : %.2f tCO2 \n"
+					+ "\u001B[32mVocÃª estÃ¡ produzindo pouquissÃ­ma quantidade de carbono. ParabÃ©ns, o planeta te agradece.\u001B[0m  \n\n",
 					carbonTL);
 		}
 
+		//modelagem dos dados para a barra
 		double conComb2=0;
 		if(conComb<2000) {
 			conComb2=1;			
@@ -230,6 +232,7 @@ public class PartInd {
 			conComb2=5;
 		}
 		
+		//modelagem dos dados para a barra
 		double recur_nat2=0;
 		if(recur_nat<2000) {
 			recur_nat2=1;			
@@ -243,6 +246,7 @@ public class PartInd {
 			recur_nat2=5;
 		}
 		
+		//modelagem dos dados para a barra
 		double nResci2=0;
 		if(nResci<2000) {
 			nResci2=1;			
