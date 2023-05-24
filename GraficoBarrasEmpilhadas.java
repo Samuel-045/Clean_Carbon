@@ -13,7 +13,7 @@ public class GraficoBarrasEmpilhadas {
 			System.out.printf("%-19s|  ", eixoY[linha - 1]);
 			for (int coluna = 0; coluna < valores.length; coluna++) {
 				if (valores2[coluna] >= linha) {
-					System.out.print(cores[coluna] + "███ \u001B[0m  " ); // Caractere para representar a barra
+					System.out.print(cores[coluna] + "### \u001B[0m  " ); // Caractere para representar a barra
 				} else {
 					System.out.print("      ");
 				}
@@ -29,13 +29,13 @@ public class GraficoBarrasEmpilhadas {
 				System.out.print("|");
 				break;
 			case 3:
-				System.out.print("|  \u001B[31m███\u001B[0m Queima de combustíveis fósseis");
+				System.out.print("|  \u001B[31m###\u001B[0m Queima de combustíveis fósseis");
 				break;
 			case 2:
-				System.out.print("|  \u001B[32m███\u001B[0m Consumo de recursos naturais");
+				System.out.print("|  \u001B[32m###\u001B[0m Consumo de recursos naturais");
 				break;
 			case 1:
-				System.out.print("|  \u001B[34m███\u001B[0m Não reciclagem ");
+				System.out.print("|  \u001B[34m###\u001B[0m Não reciclagem ");
 				break;
 			default:
 				break;
