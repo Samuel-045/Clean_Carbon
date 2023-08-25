@@ -1,6 +1,6 @@
 <h1>Clean_Carbon</h1>
 <p align="center">
-   <img src="https://img.shields.io/static/v1?label=STATUS&message=EM DESENVOLVIMENTO&color=YELLOW&style=for-the-badge"/>
+   <img src="https://img.shields.io/static/v1?label=STATUS&message=Finalizado&color=YELLOW&style=for-the-badge"/>
   <img src="https://img.shields.io/github/last-commit/Samuel-045/Clean_carbon?logo=ultm-commit&style=for-the-badge"/>
 </p>
 
